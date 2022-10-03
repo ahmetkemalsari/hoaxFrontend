@@ -28,7 +28,9 @@ pipeline {
             steps {
                 echo "deploy the application"
                 echo "deploy version ${params.VERSION}"
+                sh "cd /home/opc"
                 sh "pwd"
+                sh "mkdir testJenkinsFile"
             }
         }
     }
