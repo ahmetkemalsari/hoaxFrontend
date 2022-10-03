@@ -17,7 +17,7 @@ pipeline {
         stage('test') {
             when{
                 expression{
-                    parameters.executeTests == true
+                    params.executeTests == true
                 }
             }
             steps {
@@ -27,7 +27,7 @@ pipeline {
         stage('deploy') {
             steps {
                 echo "deploy the application"
-                echo "deploy version ${parameters.VERSION}"
+                echo "deploy version ${params.VERSION}"
                 sh "pwd"
             }
         }
