@@ -1,10 +1,13 @@
 pipeline {
     agent any
-
+    envoirement{
+        NEW_VERSION = '1.3.0'
+    }
     stages {
         stage('build') {
             steps {
                 echo "build the application"
+                echo "build version ${NEW_VERSION}"
             }
         }
         stage('test') {
@@ -16,6 +19,14 @@ pipeline {
             steps {
                 echo "deploy the application"
             }
+        }
+    }
+    post {
+        always {
+
+        }
+        success {
+
         }
     }
 }
