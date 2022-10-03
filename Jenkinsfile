@@ -21,12 +21,4 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-
-        }
-        success {
-
-        }
-    }
 }
